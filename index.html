@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>正义恐龙战队名字生成器</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script>
+        let adj = ["正义", "无敌", "英勇", "嗜血", "伟大", "强壮", "勇敢", "伟岸"]
+        let dinosour = ["霸王龙", "暴龙", "牛牛", "三角龙", "甲龙", "翼龙"]
+        let rank = ["指挥官", "将军", "战神", "百夫长", "司令", "士兵", "队长"]
+
+        let generate = function () {
+            let i = Math.floor(Math.random() * adj.length)
+            let j = Math.floor(Math.random() * dinosour.length)
+            let k = Math.floor(Math.random() * rank.length)
+            let str = adj[i] + dinosour[j] + rank[k]
+            document.getElementById("name").setAttribute("value", str)
+        }
+    </script>
+</head>
+
+
+<body>
+    <input id="name" />
+    <button onclick="generate()">生成</button>
+</body>
+
+</html>
