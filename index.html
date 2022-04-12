@@ -16,14 +16,22 @@
             let str = adj[i] + dinosour[j] + rank[k]
             document.getElementById("name").setAttribute("value", str)
         }
-        
+
     </script>
 </head>
 
 
 <body>
-    <input id="name" />
-    <button onclick="generate()">生成</button>
+    <div style="width: 100%; height: 100%;">
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td><input id="name" style="width: 100%; font-size: 100pt;"/></td>
+            </tr>
+            <tr>
+                <td><button style="font-size: 100pt;" onclick="generate()">生成</button></td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
